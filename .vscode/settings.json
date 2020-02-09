@@ -1,0 +1,78 @@
+{
+		"window.title": "${activeEditorMedium}${separator}${rootName}"
+
+		// Explorer/Saving settings
+			,"files.encoding": "utf8"
+			,"files.eol": "auto"
+			,"explorer.sortOrder": "filesFirst"
+			,"files.autoSave": "afterDelay"
+			,"files.autoSaveDelay": 5000
+			// to make file POSIX compliant:
+				,"files.insertFinalNewline": true
+				,"files.trimFinalNewlines": true
+
+				,"files.trimTrailingWhitespace": true // delete trailing spaces in the end of a line
+
+		// Editor settings
+			,"breadcrumbs.enabled": true // to see navigation paths under the tab
+			,"editor.fastScrollSensitivity": 8
+			,"workbench.editor.highlightModifiedTabs": true
+			,"editor.cursorBlinking": "smooth"
+			//,"editor.cursorStyle": "block"
+			//,"editor.cursorSmoothCaretAnimation": true
+			,"editor.renderWhitespace": "boundary" // to see double spaces and so on
+			,"editor.renderControlCharacters": false
+
+			,"[markdown]": {
+				"editor.wordWrap": "on",
+				"editor.quickSuggestions": true
+			}
+
+		// Markdownlint settings (I switched off rules that makes me angry)
+			,"markdownlint.config": {
+				"default": true
+				,"MD004": false
+				,"MD012": false
+				,"MD032": false
+				,"MD022": false
+				,"MD034": false
+			}
+
+		// Replace rules settings
+			,"replacerules.rules": {
+				"Remove trailing and leading whitespace": {
+					"find": "^\\s*(.*)\\s*$",
+					"replace": "$1"
+				}
+				,"Remove blank lines": {
+					"find": "^\\n",
+					"replace": "",
+					"languages": [
+						"typescript"
+					]
+				}
+				,"Mark Task as Done": {
+					"find": "^(\\s+)?- ",
+					"replace": "$1+ ",
+					"languages": [
+						"markdown"
+					]
+				}
+				,"Mark Task as Undone": {
+					"find": "^(\\s+)?\\+ ",
+					"replace": "$1- ",
+					"languages": [
+						"markdown"
+					]
+				}
+				,"Create bulleted list": { // Maybe it's better to use 'Markdown All in One: Toggle List' command
+					"find": "^(\\s+)?",
+					"replace": "- ",
+					"languages": [
+						"markdown"
+					]
+				}
+			}
+}
+
+// https://dev.to/thegeoffstevens/vs-code-settings-you-should-customize-5e75
