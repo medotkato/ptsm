@@ -4,11 +4,11 @@
 
 1. Все текстовое содержимое PTSM (описание, шаблонные файлы проектов и т.д. - все, что не программный код и скрипты) лицензируется по Creative Creative Commons Attribution-ShareAlike 4.0 International Public License (CC BY-SA 4.0):
    - [Описание на официальном сайте](https://creativecommons.org/licenses/by-sa/4.0/)
-   - [Файл .md с лицензией (англ.)](/licenses/LICENSE_CC_BY_SA_EN.md)
+   - [Файл .md с лицензией (англ.) в папке /licenses](/licenses/LICENSE_CC_BY_SA_EN.md)
 
 2. Весь программный код: скрипты (если я их когда-нибудь допишу) и кусочки кода где угодно в файлах системы, - лицензируются под GNU General Public License v3:
     - [GNU GPLv3 на официальном сайте](https://www.gnu.org/licenses/gpl-3.0.html)
-    - [Файл .md с лицензией (англ.)](licenses/LICENSE_GNU_GPLv3_EN.md)
+    - [Файл .md с лицензией (англ.) в папке /licenses](licenses/LICENSE_GNU_GPLv3_EN.md)
 
 Copyright (c) medotkato.
 
