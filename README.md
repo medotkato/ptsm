@@ -8,7 +8,8 @@
 
 ## Quick Start
 
-1. Скачать содержимое репозитория PTSM или выполнить в консоли git clone https://github.com/medotkato/ptsm.git
+1. Скачать содержимое репозитория PTSM или выполнить в консоли:
+   > git clone https://github.com/medotkato/ptsm.git
 2. Установить [Visual Studio Code](https://code.visualstudio.com)
 3. Запустить VS Code, выбрать File-> Open Folder и указать папку с PTSM
 4. Когда VS Code предложит (в правом нижнем углу) установить расширения, нажать Instal All
