@@ -1,12 +1,12 @@
 {
-		"window.title": "${activeEditorMedium}${separator}${rootName}"
+		"window.title": "${activeEditorMedium}${separator}${rootName}" // (must be placed in me.code-workspace in the root of /ptsm folder to work)
 
 		// Explorer/Saving settings
 			,"files.encoding": "utf8"
 			,"files.eol": "auto"
-			,"explorer.sortOrder": "filesFirst"
-			,"files.autoSave": "afterDelay"
-			,"files.autoSaveDelay": 5000
+			,"explorer.sortOrder": "filesFirst" // (must be placed in me.code-workspace in the root of /ptsm folder to work)
+			,"files.autoSave": "afterDelay" // (must be placed in me.code-workspace in the root of /ptsm folder to work)
+			,"files.autoSaveDelay": 5000 // (must be placed in me.code-workspace in the root of /ptsm folder to work)
 			// to make file POSIX compliant:
 				,"files.insertFinalNewline": true
 				,"files.trimFinalNewlines": true
@@ -14,32 +14,36 @@
 				,"files.trimTrailingWhitespace": true // delete trailing spaces in the end of a line
 
 		// Editor settings
-			,"breadcrumbs.enabled": true // to see navigation paths under the tab
+			,"breadcrumbs.enabled": true // to see navigation paths under the tab (must be placed in me.code-workspace in the root of /ptsm folder to work)
 			,"editor.fastScrollSensitivity": 8
-			,"workbench.editor.highlightModifiedTabs": true
+			,"workbench.editor.highlightModifiedTabs": true //(must be placed in me.code-workspace in the root of /ptsm folder to work)
 			,"editor.cursorBlinking": "smooth"
 			//,"editor.cursorStyle": "block"
 			//,"editor.cursorSmoothCaretAnimation": true
 			,"editor.renderWhitespace": "boundary" // to see double spaces and so on
 			,"editor.renderControlCharacters": false
+			,"editor.padding.top": 15
+
+			,"timeline.showView": true // (must be placed in me.code-workspace in the root of /ptsm folder to work)
 
 			,"[markdown]": {
 				"editor.wordWrap": "on",
 				"editor.quickSuggestions": true
 			}
-
 		// Markdownlint settings (I switched off rules that makes me angry)
 			,"markdownlint.config": {
 				"default": true
 				,"MD004": false
 				,"MD012": false
-				,"MD032": false
+				//,"MD032": false
 				,"MD022": false
 				,"MD024": false
 				,"MD034": false
+				,"MD026": false
 			}
+			,"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?" // это просто бомба! сепараторы для выделения дабл-кликом (убрал из стандартного перечня минус)
 
-		// Replace rules settings
+		// Replace rules settings (must be placed in me.code-workspace in the root of /ptsm folder to work)
 			,"replacerules.rules": {
 				"Remove trailing and leading whitespace": {
 					"find": "^\\s*(.*)\\s*$",
