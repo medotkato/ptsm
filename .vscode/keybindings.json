@@ -46,5 +46,9 @@
     {
         "key": "ctrl+alt+v",
         "command": "markdown.showSource",
+    },
+    {
+        "key": "ctrl+alt+u",
+        "command": "markdown-link-expander.expand"
     }
 ]
