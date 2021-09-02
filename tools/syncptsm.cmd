@@ -16,25 +16,25 @@ REM Getting paths from ptsm.ini
 
 set inifile=%~dp0ptsm.ini
 
-for /f "delims=" %%a in ('call ini.bat %inifile% /s folders /i ptsmlocal') do (
-    set ptsmlocal=%%a
+for /f "delims=" %%a in ('call ini.bat %inifile% /s folders /i dir_local') do (
+    set dir_local=%%a
 )
 
-for /f "delims=" %%a in ('call ini.bat %inifile% /s folders /i ptsmgit') do (
-    set ptsmgit=%%a
+for /f "delims=" %%a in ('call ini.bat %inifile% /s folders /i dir_git') do (
+    set dir_git=%%a
 )
 
 REM Backing up folders
-robocopy %ptsmlocal%.vscode %ptsmgit%.vscode /MIR /FFT /R:3 /W:10 /Z /NP /NDL
-robocopy %ptsmlocal%licenses %ptsmgit%licenses /MIR /FFT /R:3 /W:10 /Z /NP /NDL
-robocopy %ptsmlocal%notes %ptsmgit%notes /MIR /FFT /R:3 /W:10 /Z /NP /NDL
-robocopy %ptsmlocal%tools %ptsmgit%tools /MIR /FFT /R:3 /W:10 /Z /NP /NDL
+robocopy %dir_local%.vscode %dir_git%.vscode /MIR /FFT /R:3 /W:10 /Z /NP /NDL
+robocopy %dir_local%licenses %dir_git%licenses /MIR /FFT /R:3 /W:10 /Z /NP /NDL
+robocopy %dir_local%notes %dir_git%notes /MIR /FFT /R:3 /W:10 /Z /NP /NDL
+robocopy %dir_local%tools %dir_git%tools /MIR /FFT /R:3 /W:10 /Z /NP /NDL
 
 REM Backing up files
-robocopy %ptsmlocal% %ptsmgit% *.md /FFT /R:3 /W:10 /Z /NP /NDL
-robocopy %ptsmlocal% %ptsmgit% me.code-workspace /FFT /R:3 /W:10 /Z /NP /NDL
+robocopy %dir_local% %dir_git% *.md /FFT /R:3 /W:10 /Z /NP /NDL
+robocopy %dir_local% %dir_git% me.code-workspace /FFT /R:3 /W:10 /Z /NP /NDL
 
-cd %ptsmgit%
+cd %dir_git%
 git add * && git commit -m "sync @ %date%-%time%" && git push origin master
 
-cd %ptsmlocal%
+cd %dir_local%

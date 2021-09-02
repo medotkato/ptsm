@@ -1,13 +1,11 @@
 # PTSM: Tasks to be done (someday)
 
 - Скрипт переноса задач дня в симплноут по апи (из заметка Inbox Mobile) - [see](https://simperium.com/docs/reference/python/#bucket-get)
-- PTSM: [Выбрать лицензию](https://choosealicense.com/), вероятно [CC BY-SA](https://creativecommons.org/share-your-work/licensing-examples/#sa) для фреймворка и GPL v3 для скриптов
 - PTSM: Описать схему файлов в PTSM (header, desc, etc) - спец файл, который потом будет брать скрипт и по нему понимать какие секции как устроены (для сборки описания системы, например)
 - PTSM: Подумать над простановкой ссылок на проекты, когда пишешь их в названии - как оформлять? #? +?
 - PTSM: Создать скрипт сборки (переноса) чужих обязательств из списка задач по указанию исполнителя c at (@)
 - PTSM: Сделать так, чтобы по нажатию кнопки выполненная строка отмечалась с - на + и сама переносилась в раздел "+"
 - PTSM: Как быть если делаешь себе уровень вложенности BUS/DEV/FIN, который разрывает в описании задачи Команду и Проект? Делать обходку?
-- Me: PTSM: Создать bat-скрипт с robocopy для бэкапа ptsm папки куда-то еще на винт
 - Прочитать по теме plain-text management (для вдохновения):
   - [Index Your Markdown-Based Journal With Yaml Front Matter!](https://journalcli.me/)
   - [Plain Text Life project. Github with: the README, the today.txt template](https://github.com/jukil/plain-text-life)

@@ -1,4 +1,5 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// !!! Copy the content (below) into keybindings.json in the user folder (ctrl+shift+p -> preferences: open keyboard shortcuts (json))
+
 [
     {
         "key": "ctrl+j",
@@ -45,7 +46,7 @@
     },
     {
         "key": "ctrl+alt+v",
-        "command": "markdown.showSource",
+        "command": "markdown.showSource"
     },
     {
         "key": "ctrl+alt+u",

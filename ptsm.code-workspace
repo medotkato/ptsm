@@ -1,12 +1,23 @@
 {
-		"window.title": "${activeEditorMedium}${separator}${rootName}" // (must be placed in me.code-workspace in the root of /ptsm folder to work)
+	"folders": [
+		{
+			"path": "."
+		},
+	],
+	"settings": {
+		"workbench.editorAssociations": {
+			"*.md": "default" // default file format when you open a new file
+		},
+
+		"window.title": "${activeEditorMedium}${separator}${rootName}"
 
 		// Explorer/Saving settings
 			,"files.encoding": "utf8"
 			,"files.eol": "auto"
-			,"explorer.sortOrder": "filesFirst" // (must be placed in me.code-workspace in the root of /ptsm folder to work)
-			,"files.autoSave": "afterDelay" // (must be placed in me.code-workspace in the root of /ptsm folder to work)
-			,"files.autoSaveDelay": 5000 // (must be placed in me.code-workspace in the root of /ptsm folder to work)
+			,"files.defaultLanguage": "markdown"
+			,"explorer.sortOrder": "filesFirst"
+			,"files.autoSave": "afterDelay"
+			,"files.autoSaveDelay": 5000
 			// to make file POSIX compliant:
 				,"files.insertFinalNewline": true
 				,"files.trimFinalNewlines": true
@@ -14,23 +25,22 @@
 				,"files.trimTrailingWhitespace": true // delete trailing spaces in the end of a line
 
 		// Editor settings
-			,"breadcrumbs.enabled": true // to see navigation paths under the tab (must be placed in me.code-workspace in the root of /ptsm folder to work)
+			,"breadcrumbs.enabled": true // to see navigation paths under the tab
 			,"editor.fastScrollSensitivity": 8
-			,"workbench.editor.highlightModifiedTabs": true //(must be placed in me.code-workspace in the root of /ptsm folder to work)
+			,"workbench.editor.highlightModifiedTabs": true
 			,"editor.cursorBlinking": "smooth"
-			//,"editor.cursorStyle": "block"
-			//,"editor.cursorSmoothCaretAnimation": true
 			,"editor.renderWhitespace": "boundary" // to see double spaces and so on
 			,"editor.renderControlCharacters": false
 			,"editor.padding.top": 15
 
-			,"timeline.showView": true // (must be placed in me.code-workspace in the root of /ptsm folder to work)
+			,"timeline.showView": true
 
 			,"[markdown]": {
 				"editor.wordWrap": "on",
 				"editor.quickSuggestions": true
 			}
-		// Markdownlint settings (I switched off rules that makes me angry)
+
+			// Markdownlint settings (I switched off rules that makes me angry)
 			,"markdownlint.config": {
 				"default": true
 				,"MD004": false
@@ -43,7 +53,11 @@
 			}
 			,"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?" // это просто бомба! сепараторы для выделения дабл-кликом (убрал из стандартного перечня минус)
 
-		// Replace rules settings (must be placed in me.code-workspace in the root of /ptsm folder to work)
+		// Terminal
+			, "terminal.integrated.localEchoLatencyThreshold": 15
+			, "terminal.integrated.localEchoStyle": "dim"
+
+		// Replace rules settings
 			,"replacerules.rules": {
 				"Remove trailing and leading whitespace": {
 					"find": "^\\s*(.*)\\s*$",
@@ -70,7 +84,7 @@
 						"markdown"
 					]
 				}
-				,"Create bulleted list": { // Maybe it's better to use 'Markdown All in One: Toggle List' command
+				,"Create bulleted list": {
 					"find": "^(\\s+)?",
 					"replace": "- ",
 					"languages": [
@@ -78,6 +92,18 @@
 					]
 				}
 			}
+	},
+	"extensions": {
+		"recommendations": [
+			"yzhang.markdown-all-in-one" // to make working with Markdown easier
+			,"davidanson.vscode-markdownlint" // to make your .md looks more accurate
+			,"bhughes339.replacerules" // to use simple rules for replacing and be able bind these actions to some shortcut (like ctrl+d to change - to +)
+			,"fayras.simple-new-file" // to create files from command palette and (!) with autocomplete on path
+			,"skn0tt.markdown-link-expander" // ctrl+alt+u to get the header from the page's url
+			,"tchayen.markdown-links" // to see the big picture with links between notes (graph)
+			,"johnpapa.read-time" // to quickly see the read time for your .md/txt file
+		]
+	}
 }
 
-// https://dev.to/thegeoffstevens/vs-code-settings-you-should-customize-5e75
+//https://dev.to/thegeoffstevens/vs-code-settings-you-should-customize-5e75

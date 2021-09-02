@@ -5,6 +5,21 @@
 ## [Unreleased]
 
 
+## [1.2] - 2021-09-02
+
+- поправил форматирование консольной команды "git clone ..." в README.md с "цитата" на "код"
+- в me.workspace добавил "workbench.editorAssociations": [{"viewType": "default", "filenamePattern": "*.md"}], -- чтобы расширение office viewer не переопределило свой редактор для .md (см. details этого расширения)
+- все батнички переделаны в .cmd (заодно больше не нужен chcp 65001)
+- в расширения добавлены:
+  - "skn0tt.markdown-link-expander" // ctrl+alt+u to get the header from the page's url
+  - "tchayen.markdown-links" // to see the big picture with links between notes (graph)
+  - "johnpapa.read-time" // to quickly see the read time for your .md/txt file
+- pdf.bat теперь md2pdf.cmd
+- перенес все настройки + рекомендуемые расширения в ptsm.code-workspace
+- перенес в корень файл keybindings.json, т.к. избавился от папки .vscode, а содержимое этого файла все равно нужно копировать в пользовательские настройки на машине
+- добавил папку zettelkasten (опишу, как с ней работать потом)
+- добавил скрипт синхронизации с гит репозиторием
+
 
 ## [1.1] - 2020-07-16
 

@@ -27,7 +27,9 @@ if "%~1" == "" goto usage
 if "%~1" == "/?" goto usage
 if "%~1" == "?" goto usage
 
-chcp 65001
+REM chcp 65001
+REM Changing codepage is optional. It used to work on my previous environment.
+REM Is not needed on my new environment with UTF-8 (and it's a cmd file now).
 
 for /f "delims=" %%a in ('call ini.bat %inifile% /s folders /i outpath') do (
     set outpath=%%a
@@ -43,7 +45,11 @@ rem md file to be printed to pdf
 set arg2=%2
 rem css file
 
-set filename=%arg1:~0,-3%
+rem set filename=%arg1:~0,-3%
+rem %arg1 = full argument 1 may be a filename with an absolute path (like C:\somefolder\someotherfolder\filename) - in this case title will looks odd.
+rem %~nx1 extracts filename (n) and extension (x) from path in 1st argument
+
+set filename=%~n1
 rem getting the filename for md file without its extension
 
 pandoc %arg1% -t html -s --toc -c %csspath%%arg2% --metadata title="%filename%: %date%" -o %filename%_%date%.pdf

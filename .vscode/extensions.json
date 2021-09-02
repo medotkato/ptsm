@@ -1,9 +1,0 @@
-{
-    "recommendations": [
-      "yzhang.markdown-all-in-one" // to make working with Markdown easier
-      ,"davidanson.vscode-markdownlint" // to make your .md looks more accurate
-      ,"bhughes339.replacerules" // to use simple rules for replacing and be able bind these actions to some shortcut (like ctrl+d to change - to +)
-      ,"fayras.simple-new-file" // to create files from command palette and (!) with autocomplete on path
-      ,"tchayen.markdown-links" // to make links with titles from copy-pasted urls
-    ]
-}
